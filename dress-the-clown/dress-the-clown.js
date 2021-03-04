@@ -10,7 +10,7 @@
 
 let indexes = [0, 0, 0]
 
-let mainIndex = 0  // this is to reference the body overall: 0 = head, 1 = body 2 = shoes
+let mainIndex = 0  // this is to reference the body overall: 0 = head, 1 = body 2 = shoes and starts at 0
 
 let head = document.getElementById("head")
 let body = document.getElementById("body")
@@ -41,7 +41,9 @@ function checkKey(e) {
 
 function changeHorizontal(alter) {
 
+  // new variable called index, we are ref. which ever index we are working with (indexes) and passing in the main index so we know where on the body we are working.
   let index = indexes[mainIndex]
+  // new variable image - this ref the images depending what section we are working with (head body or shoes) and passes in the main index.
   let image = images[mainIndex]
   let str = strings[mainIndex]
 
@@ -57,10 +59,6 @@ function changeHorizontal(alter) {
 
   image.src = "./images/" + str + index + ".png"
 }
-
-
-
-
 
 // This function will allow us to move up and down the body and target the 3 different parts.  Again the if statements will allow
 // us to cycle through them without exceeding the options available.
