@@ -29,20 +29,8 @@ function checkKey(e) {
   }
 }
 
-// This function will allow us to alter an item of clothing.  The if statements contained will allow us to cycle through the options
-// without exceeding the number of options available. 
 
-function changeHorizontal(alter) {
-  headIndex += alter
 
-  if (headIndex < 0)
-    headIndex = 5
-
-  if (headIndex > 5)
-    headIndex = 0
-
-  head.src = "./images/head" + headIndex + ".png"
-}
 
 // This function will allow us to move up and down the body and target the 3 different parts.  Again the if statements will allow
 // us to cycle through them without exceeding the options available.
@@ -55,6 +43,36 @@ function changeVertical(alter) {
   if (mainIndex < 2)
     mainIndex = 0
 }
+
+
+
+
+
+// This function will allow us to alter an item of clothing.  The if statements contained will allow us to cycle through the options
+// without exceeding the number of options available. 
+// Note that this function is actually commented out - the reason for this is it only deal with the head - the code would need to be 
+// duplicated for both the body and the shoes resulting in a lot or repeated code which is not ideal.  It has been retained to show the
+// layout for a single entity for future reference.
+
+
+// function changeHorizontal(alter) {
+
+//   if (mainIndex == 0) {
+//     headIndex += alter
+
+//     if (headIndex < 0)
+//       headIndex = 5
+
+//     if (headIndex > 5)
+//       headIndex = 0
+
+//     head.src = "./images/head" + headIndex + ".png"
+//   }
+
+
+// }
+
+
 
 
 
