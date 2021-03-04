@@ -16,6 +16,11 @@ let head = document.getElementById("head")
 let body = document.getElementById("body")
 let shoes = document.getElementById("shoes")
 
+// This array allows us to target image.src and change the image according to position in the array. Previously we targeted only the 
+// head image or body image but now we are able to pick and choose according to where we are within the mainIndex
+let images = [head, body, shoes]
+let strings = ["head", "body", "shoes"]
+
 document.onkeydown = checkKey;
 
 function checkKey(e) {
@@ -34,6 +39,26 @@ function checkKey(e) {
   }
 }
 
+function changeHorizontal(alter) {
+
+  let index = indexes[mainIndex]
+  let image = images[mainIndex]
+  let str = strings[mainIndex]
+
+  index += alter
+
+  if (index < 0)
+    index = 5
+
+  if (index > 5)
+    index = 0
+
+  indexes[mainIndex] = index
+
+  image.src = "./images/" + str + index + ".png"
+}
+
+
 
 
 
@@ -45,7 +70,7 @@ function changeVertical(alter) {
   if (mainIndex < 0)
     mainIndex = 2
 
-  if (mainIndex < 2)
+  if (mainIndex > 2)
     mainIndex = 0
 }
 
@@ -58,7 +83,6 @@ function changeVertical(alter) {
 // Note that this function is actually commented out - the reason for this is it only deal with the head - the code would need to be 
 // duplicated for both the body and the shoes resulting in a lot or repeated code which is not ideal.  It has been retained to show the
 // layout for a single entity for future reference.
-
 
 // function changeHorizontal(alter) {
 
