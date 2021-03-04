@@ -1,9 +1,14 @@
 // -    -   -   -   -  //
 // JAVASCRIPT CARNIVAL //
 // -    -   -   -   -  //
-let headIndex = 0 // references the head - a cycle through the numbers 0-5 changes outfit type accordingly
-let bodyIndex = 0 // ditto above
-let shoesIndex = 0 // ditto above
+// let headIndex = 0 // references the head - a cycle through the numbers 0-5 changes outfit type accordingly
+// let bodyIndex = 0 // ditto above
+// let shoesIndex = 0 // ditto above
+
+// Above you can see 3 separate indexes commented out - they have been combined below into a single index allowing us to tighten up our
+// function further down - each 0 represents each index i.e. head, body and shoes.
+
+let indexes = [0, 0, 0]
 
 let mainIndex = 0  // this is to reference the body overall: 0 = head, 1 = body 2 = shoes
 
